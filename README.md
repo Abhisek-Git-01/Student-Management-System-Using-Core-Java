@@ -1,8 +1,10 @@
-# 🎓 Student Management System (Core Java)
+# 🎓 Student Management System (Core Java + JDBC)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-Core-orange"/>
-  <img src="https://img.shields.io/badge/OOP-Concepts-blue"/>
+  <img src="https://img.shields.io/badge/JDBC-Database-blue"/>
+  <img src="https://img.shields.io/badge/MySQL-DB-green"/>
+  <img src="https://img.shields.io/badge/OOP-Concepts-purple"/>
   <img src="https://img.shields.io/badge/Console-App-lightgrey"/>
 </p>
 
@@ -10,17 +12,20 @@
 
 ## 🚀 Overview
 
-The **Student Management System** is a **Core Java console-based application** designed to manage student records. It demonstrates fundamental programming concepts such as **OOP (Object-Oriented Programming)**, collections, and basic data handling.
+The **Student Management System** is a **Core Java console-based application** that performs CRUD operations using **JDBC for database connectivity**.
+
+This project demonstrates real-world interaction between Java applications and relational databases.
 
 ---
 
 ## 🎯 Features
 
-* ➕ Add new student records
+* ➕ Add new student
 * 📄 View all students
 * ✏️ Update student details
 * ❌ Delete student records
 * 🔍 Search student by ID
+* 🗄️ Persistent storage using **MySQL + JDBC**
 
 ---
 
@@ -35,27 +40,29 @@ The **Student Management System** is a **Core Java console-based application** d
 ## 🛠️ Tech Stack
 
 * Java (Core Java)
+* JDBC
+* MySQL
 * OOP Concepts
-* Collections (ArrayList / List)
 
 ---
 
 ## 📂 Project Structure
 
-```id="3w9kq1"
+```id="p1z8m4"
 src/
 │
 ├── model        # Student class
+├── dao          # JDBC operations (StudentDAO)
 ├── service      # Business logic
-├── util         # Utility/helper classes
-└── main         # Entry point (Main class)
+├── util         # DB connection utility
+└── main         # Entry point
 ```
 
 ---
 
 ## 🔄 Working Flow
 
-User Input → Menu → Service Layer → Data Storage (List) → Output
+User Input → Service Layer → DAO (JDBC) → Database → Response
 
 ---
 
@@ -63,25 +70,23 @@ User Input → Menu → Service Layer → Data Storage (List) → Output
 
 1. Clone the repository
 
-```bash id="6p2xj9"
+```bash id="k2v7q9"
 git clone https://github.com/Abhisek-Git-01/<your-repo-name>.git
 ```
 
-2. Open project in IDE (Eclipse / IntelliJ)
+2. Setup database:
+
+* Create MySQL database
+* Create student table
+* Update DB credentials in code
 
 3. Run the main class
-
-```java id="y8m1r3"
-public static void main(String[] args)
-```
-
-4. Follow menu options in console
 
 ---
 
 ## 📌 Sample Menu
 
-```id="q2z8f1"
+```id="m9x3t1"
 1. Add Student
 2. View Students
 3. Update Student
@@ -92,21 +97,30 @@ public static void main(String[] args)
 
 ---
 
+## 💡 Key Concepts Used
+
+* JDBC (Connection, PreparedStatement, ResultSet)
+* CRUD Operations
+* OOP Principles
+* Exception Handling
+* Database Connectivity
+
+---
+
 ## 🎯 Learning Outcome
 
-* Strong understanding of OOP concepts
-* Practice with Java Collections
-* Implemented CRUD operations without frameworks
-* Built logic for real-world application
+* Built a database-driven Java application
+* Learned how to perform CRUD operations using JDBC
+* Understood SQL query execution from Java
+* Implemented layered architecture (DAO + Service)
 
 ---
 
 ## 📊 Future Enhancements
 
-* 💾 File handling (save data permanently)
-* 🗄️ Database integration (JDBC)
-* 🌐 GUI (Swing / JavaFX)
-* 🔐 User authentication
+* 🌐 Convert to Spring Boot REST API
+* 🎨 Add GUI (Swing / JavaFX)
+* 🔐 Add authentication system
 
 ---
 
@@ -118,6 +132,6 @@ Feel free to fork and improve this project.
 
 ## ⭐ Acknowledgement
 
-This project is created for learning and practicing Core Java concepts.
+This project is developed for practicing Core Java and JDBC concepts.
 
 ---
